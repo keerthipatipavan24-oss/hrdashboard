@@ -1,34 +1,31 @@
 /* =========================================================
-   ADD EMPLOYEE PAGE
+   ADD EMPLOYEE LAYOUT
 ========================================================= */
 
 .add-employee-layout {
-  display: flex;
-
   width: 100%;
   min-height: 100vh;
 
   background: #f4f7fb;
-  box-sizing: border-box;
 }
 
 
 /* =========================================================
-   MAIN CONTENT
+   CONTENT
+   Sidebar is fixed at 260px, so content must leave space
 ========================================================= */
 
 .add-employee-content {
-  flex: 1 1 auto;
+  margin-left: 260px;
 
-  width: auto;
-  min-width: 0;
+  width: calc(100% - 260px);
   min-height: 100vh;
 
   padding: 45px 44px;
 
-  background: #f4f7fb;
-
   box-sizing: border-box;
+
+  background: #f4f7fb;
 
   overflow-x: hidden;
 }
@@ -43,8 +40,6 @@
   max-width: 1100px;
 
   margin: 0 auto;
-
-  box-sizing: border-box;
 }
 
 
@@ -53,11 +48,7 @@
 ========================================================= */
 
 .add-employee-page-header {
-  width: 100%;
-
-  margin: 0 0 32px;
-
-  box-sizing: border-box;
+  margin-bottom: 32px;
 }
 
 .add-employee-page-header h1 {
@@ -81,14 +72,12 @@
 
 
 /* =========================================================
-   EMPLOYEE SECTION
+   SECTION
 ========================================================= */
 
 .add-employee-section {
   width: 100%;
   max-width: 1100px;
-
-  box-sizing: border-box;
 }
 
 
@@ -97,18 +86,14 @@
 ========================================================= */
 
 .add-employee-header {
-  width: 100%;
-
-  margin: 0 0 24px;
-
-  box-sizing: border-box;
+  margin-bottom: 24px;
 }
 
 .add-employee-header h2 {
   margin: 0 0 8px;
 
   font-size: 28px;
-  line-height: 1.3;
+  line-height: 1.2;
   font-weight: 700;
 
   color: #111827;
@@ -143,6 +128,7 @@
   border-radius: 8px;
 
   background: #ffffff;
+
   color: #1e293b;
 
   font-size: 15px;
@@ -150,17 +136,11 @@
 
   cursor: pointer;
 
-  box-sizing: border-box;
-
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .back-to-employees:hover {
   background: #f1f5f9;
-
   border-color: #94a3b8;
 
   transform: translateY(-1px);
@@ -169,89 +149,42 @@
 
 /* =========================================================
    TABLET
-   601px - 900px
 ========================================================= */
 
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 768px) and (max-width: 1000px) {
 
   .add-employee-content {
-    width: auto;
-    min-width: 0;
+    margin-left: 220px;
+
+    width: calc(100% - 220px);
 
     padding: 40px 30px;
   }
 
-  .add-employee-container {
-    width: 100%;
-    max-width: 100%;
-  }
-
   .add-employee-section {
-    width: 100%;
     max-width: 100%;
-  }
-
-  .add-employee-page-header h1 {
-    font-size: 38px;
-  }
-
-  .add-employee-page-header p {
-    font-size: 17px;
-  }
-
-  .add-employee-header h2 {
-    font-size: 26px;
   }
 }
 
 
 /* =========================================================
    MOBILE
-   600px AND BELOW
 ========================================================= */
 
-@media (max-width: 600px) {
-
-  .add-employee-layout {
-    width: 100%;
-    min-width: 0;
-  }
+@media (max-width: 767px) {
 
   .add-employee-content {
-    flex: 1 1 auto;
+    margin-left: 0;
 
     width: 100%;
-    max-width: 100%;
-    min-width: 0;
 
     min-height: auto;
 
     padding: 28px 18px;
-
-    box-sizing: border-box;
-
-    overflow-x: hidden;
-  }
-
-  .add-employee-container {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-
-    margin: 0;
-  }
-
-  .add-employee-page-header {
-    width: 100%;
-
-    margin-bottom: 26px;
   }
 
   .add-employee-page-header h1 {
     font-size: 34px;
-    line-height: 1.2;
-
-    margin: 0 0 8px;
   }
 
   .add-employee-page-header p {
@@ -259,83 +192,11 @@
     line-height: 1.5;
   }
 
-  .add-employee-section {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .add-employee-header {
-    margin-bottom: 22px;
-  }
-
   .add-employee-header h2 {
     font-size: 24px;
-    line-height: 1.3;
   }
 
   .add-employee-header p {
     font-size: 15px;
-    line-height: 1.5;
-  }
-
-  .back-to-employees {
-    width: 100%;
-
-    margin-bottom: 20px;
-  }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   430px AND BELOW
-========================================================= */
-
-@media (max-width: 430px) {
-
-  .add-employee-content {
-    padding: 22px 14px 30px;
-  }
-
-  .add-employee-page-header {
-    margin-bottom: 22px;
-  }
-
-  .add-employee-page-header h1 {
-    font-size: 29px;
-  }
-
-  .add-employee-page-header p {
-    font-size: 14px;
-  }
-
-  .add-employee-header h2 {
-    font-size: 22px;
-  }
-
-  .add-employee-header p {
-    font-size: 14px;
-  }
-}
-
-
-/* =========================================================
-   EXTRA SMALL
-   374px AND BELOW
-========================================================= */
-
-@media (max-width: 374px) {
-
-  .add-employee-content {
-    padding: 18px 10px 26px;
-  }
-
-  .add-employee-page-header h1 {
-    font-size: 26px;
-  }
-
-  .add-employee-header h2 {
-    font-size: 20px;
   }
 } 
