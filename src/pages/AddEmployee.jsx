@@ -1,5 +1,6 @@
 import EmployeeForm from "../components/EmployeeForm";
 import Sidebar from "../components/Sidebar";
+import Header from "./Header";
 
 import "./AddEmployee.css";
 
@@ -9,35 +10,41 @@ export default function AddEmployee() {
 
       <Sidebar />
 
-      <main className="add-employee-content">
+      <div className="add-employee-main">
 
-        <div className="add-employee-container">
+        <Header />
 
-          <header className="add-employee-page-header">
-            <h1>Add Employee</h1>
+        <main className="add-employee-content">
 
-            <p>
-              Create a new employee record.
-            </p>
-          </header>
+          <div className="add-employee-container">
 
-          <section className="add-employee-section">
-
-            <div className="add-employee-header">
-              <h2>Employee Details</h2>
+            <header className="add-employee-page-header">
+              <h1>Add Employee</h1>
 
               <p>
-                Enter the employee information below.
+                Create a new employee record.
               </p>
-            </div>
+            </header>
 
-            <EmployeeForm />
+            <section className="add-employee-section">
 
-          </section>
+              <div className="add-employee-header">
+                <h2>Employee Details</h2>
 
-        </div>
+                <p>
+                  Enter the employee information below.
+                </p>
+              </div>
 
-      </main>
+              <EmployeeForm />
+
+            </section>
+
+          </div>
+
+        </main>
+
+      </div>
 
     </div>
   );

@@ -1,10 +1,6 @@
-/* ================================
+/* =========================================================
    ADD EMPLOYEE PAGE
-================================ */
-
-/* ================================
-   ADD EMPLOYEE LAYOUT
-================================ */
+========================================================= */
 
 .add-employee-layout {
   display: flex;
@@ -13,51 +9,62 @@
   min-height: 100vh;
 
   background: #f4f7fb;
+  box-sizing: border-box;
 }
 
 
-/* ================================
-   CONTENT
-================================ */
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
 
 .add-employee-content {
-  flex: 1;
-  min-width: 0;
+  flex: 1 1 auto;
 
+  width: auto;
+  min-width: 0;
   min-height: 100vh;
 
   padding: 45px 44px;
 
+  background: #f4f7fb;
+
   box-sizing: border-box;
 
-  background: #f4f7fb;
+  overflow-x: hidden;
 }
 
 
-/* ================================
+/* =========================================================
    CONTAINER
-================================ */
+========================================================= */
 
 .add-employee-container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
 
   margin: 0 auto;
+
+  box-sizing: border-box;
 }
 
 
-/* ================================
+/* =========================================================
    PAGE HEADER
-================================ */
+========================================================= */
 
 .add-employee-page-header {
-  margin-bottom: 32px;
+  width: 100%;
+
+  margin: 0 0 32px;
+
+  box-sizing: border-box;
 }
 
 .add-employee-page-header h1 {
   margin: 0 0 8px;
 
   font-size: 42px;
+  line-height: 1.2;
   font-weight: 700;
 
   color: #111827;
@@ -67,32 +74,41 @@
   margin: 0;
 
   font-size: 18px;
+  line-height: 1.5;
 
   color: #365b82;
 }
 
 
-/* ================================
-   SECTION
-================================ */
+/* =========================================================
+   EMPLOYEE SECTION
+========================================================= */
 
 .add-employee-section {
   width: 100%;
+  max-width: 1100px;
+
+  box-sizing: border-box;
 }
 
 
-/* ================================
+/* =========================================================
    SECTION HEADER
-================================ */
+========================================================= */
 
 .add-employee-header {
-  margin-bottom: 24px;
+  width: 100%;
+
+  margin: 0 0 24px;
+
+  box-sizing: border-box;
 }
 
 .add-employee-header h2 {
   margin: 0 0 8px;
 
   font-size: 28px;
+  line-height: 1.3;
   font-weight: 700;
 
   color: #111827;
@@ -102,95 +118,15 @@
   margin: 0;
 
   font-size: 16px;
+  line-height: 1.5;
 
   color: #365b82;
 }
 
 
-/* ================================
-   MOBILE
-================================ */
-
-@media (max-width: 700px) {
-
-  .add-employee-layout {
-    flex-direction: column;
-  }
-
-  .add-employee-content {
-    width: 100%;
-
-    min-height: auto;
-
-    padding: 28px 18px;
-  }
-
-  .add-employee-container {
-    width: 100%;
-  }
-
-  .add-employee-page-header h1 {
-    font-size: 34px;
-  }
-
-  .add-employee-page-header p {
-    font-size: 16px;
-
-    line-height: 1.5;
-  }
-
-  .add-employee-header h2 {
-    font-size: 24px;
-  }
-
-  .add-employee-header p {
-    font-size: 15px;
-  }
-} 
-
-.add-employee-content {
-  width: 100%;
-  min-height: 100vh;
-
-  flex: 1 1 auto;
-
-  min-width: 0;
-
-  padding: 50px 44px;
-
-  background: #f4f7fb;
-
-  overflow-x: hidden;
-}
-
-
-/* ================================
-   PAGE HEADER
-================================ */
-
-.add-employee-page-header {
-  margin-bottom: 32px;
-}
-
-.add-employee-page-header h1 {
-  margin: 0 0 8px;
-
-  font-size: 42px;
-
-  font-weight: 700;
-
-  color: #111827;
-}
-
-.add-employee-page-header p {
-  margin: 0;
-
-  font-size: 18px;
-
-  color: #365b82;
-}
-
-/* BACK TO EMPLOYEES BUTTON */
+/* =========================================================
+   BACK TO EMPLOYEES BUTTON
+========================================================= */
 
 .back-to-employees {
   display: inline-flex;
@@ -201,24 +137,25 @@
   min-height: 44px;
 
   margin-bottom: 24px;
-
   padding: 0 18px;
 
   border: 1px solid #cbd5e1;
-
   border-radius: 8px;
 
   background: #ffffff;
-
   color: #1e293b;
 
   font-size: 15px;
-
   font-weight: 600;
 
   cursor: pointer;
 
-  transition: 0.2s ease;
+  box-sizing: border-box;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .back-to-employees:hover {
@@ -227,88 +164,178 @@
   border-color: #94a3b8;
 
   transform: translateY(-1px);
-} 
-
-
-/* ================================
-   SECTION
-================================ */
-
-.add-employee-section {
-  width: 100%;
-
-  max-width: 1100px;
 }
 
 
-/* ================================
-   SECTION HEADER
-================================ */
-
-.add-employee-header {
-  margin-bottom: 24px;
-}
-
-.add-employee-header h2 {
-  margin: 0 0 8px;
-
-  font-size: 28px;
-
-  font-weight: 700;
-
-  color: #111827;
-}
-
-.add-employee-header p {
-  margin: 0;
-
-  font-size: 16px;
-
-  color: #365b82;
-}
-
-
-/* ================================
+/* =========================================================
    TABLET
-================================ */
+   601px - 900px
+========================================================= */
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
+
   .add-employee-content {
+    width: auto;
+    min-width: 0;
+
     padding: 40px 30px;
   }
 
-  .add-employee-section {
+  .add-employee-container {
+    width: 100%;
     max-width: 100%;
+  }
+
+  .add-employee-section {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .add-employee-page-header h1 {
+    font-size: 38px;
+  }
+
+  .add-employee-page-header p {
+    font-size: 17px;
+  }
+
+  .add-employee-header h2 {
+    font-size: 26px;
   }
 }
 
 
-/* ================================
+/* =========================================================
    MOBILE
-================================ */
+   600px AND BELOW
+========================================================= */
 
-@media (max-width: 700px) {
-  .add-employee-content {
+@media (max-width: 600px) {
+
+  .add-employee-layout {
     width: 100%;
+    min-width: 0;
+  }
+
+  .add-employee-content {
+    flex: 1 1 auto;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    min-height: auto;
 
     padding: 28px 18px;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+  }
+
+  .add-employee-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin: 0;
+  }
+
+  .add-employee-page-header {
+    width: 100%;
+
+    margin-bottom: 26px;
   }
 
   .add-employee-page-header h1 {
     font-size: 34px;
+    line-height: 1.2;
+
+    margin: 0 0 8px;
   }
 
   .add-employee-page-header p {
     font-size: 16px;
-
     line-height: 1.5;
+  }
+
+  .add-employee-section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .add-employee-header {
+    margin-bottom: 22px;
   }
 
   .add-employee-header h2 {
     font-size: 24px;
+    line-height: 1.3;
   }
 
   .add-employee-header p {
     font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .back-to-employees {
+    width: 100%;
+
+    margin-bottom: 20px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   430px AND BELOW
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .add-employee-content {
+    padding: 22px 14px 30px;
+  }
+
+  .add-employee-page-header {
+    margin-bottom: 22px;
+  }
+
+  .add-employee-page-header h1 {
+    font-size: 29px;
+  }
+
+  .add-employee-page-header p {
+    font-size: 14px;
+  }
+
+  .add-employee-header h2 {
+    font-size: 22px;
+  }
+
+  .add-employee-header p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+   374px AND BELOW
+========================================================= */
+
+@media (max-width: 374px) {
+
+  .add-employee-content {
+    padding: 18px 10px 26px;
+  }
+
+  .add-employee-page-header h1 {
+    font-size: 26px;
+  }
+
+  .add-employee-header h2 {
+    font-size: 20px;
   }
 } 
