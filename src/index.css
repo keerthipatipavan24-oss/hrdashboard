@@ -1,0 +1,277 @@
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #111827;
+  overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   COMMON PAGE LAYOUT
+========================================================= */
+
+.page-layout,
+.dashboard-layout,
+.employees-layout,
+.departments-layout,
+.attendance-layout,
+.leave-layout,
+.performance-layout {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   DESKTOP
+   1001px AND ABOVE
+========================================================= */
+
+@media (min-width: 1001px) {
+
+  /* ---------- SIDEBAR ---------- */
+
+  .sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 260px;
+    min-width: 260px;
+    max-width: 260px;
+
+    height: 100vh;
+    min-height: 100vh;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+
+  /* ---------- MAIN CONTENT ---------- */
+
+  .dashboard-main,
+  .employees-main,
+  .departments-main,
+  .attendance-main,
+  .leave-main,
+  .performance-main {
+    width: calc(100% - 260px);
+
+    min-width: 0;
+    min-height: 100vh;
+
+    margin-left: 260px;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   768px - 1000px
+
+   SIDEBAR = LEFT
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1000px) {
+
+  /* ---------- SIDEBAR ---------- */
+
+  .sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+
+    height: 100vh;
+    min-height: 100vh;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+
+  /* ---------- MAIN CONTENT ---------- */
+
+  .dashboard-main,
+  .employees-main,
+  .departments-main,
+  .attendance-main,
+  .leave-main,
+  .performance-main {
+    width: calc(100% - 220px);
+
+    min-width: 0;
+    min-height: 100vh;
+
+    margin-left: 220px;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   767px AND BELOW
+
+   SIDEBAR = TOP
+   MAIN = BELOW SIDEBAR
+========================================================= */
+
+@media (max-width: 767px) {
+
+  /* ---------- PAGE LAYOUT ---------- */
+
+  .page-layout,
+  .dashboard-layout,
+  .employees-layout,
+  .departments-layout,
+  .attendance-layout,
+  .leave-layout,
+  .performance-layout {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+  }
+
+
+  /* ---------- SIDEBAR ---------- */
+
+  .sidebar,
+  .page-layout > .sidebar,
+  .dashboard-layout > .sidebar,
+  .employees-layout > .sidebar,
+  .departments-layout > .sidebar,
+  .attendance-layout > .sidebar,
+  .leave-layout > .sidebar,
+  .performance-layout > .sidebar {
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+
+    flex: 0 0 auto !important;
+
+    z-index: 1000;
+
+    overflow: visible !important;
+  }
+
+
+  /* ---------- MAIN CONTENT ---------- */
+
+  .dashboard-main,
+  .employees-main,
+  .departments-main,
+  .attendance-main,
+  .leave-main,
+  .performance-main {
+    width: 100% !important;
+    max-width: 100%;
+
+    min-width: 0;
+    min-height: 0;
+
+    margin: 0 !important;
+    padding: 0;
+
+    flex: 0 0 auto;
+
+    overflow-x: hidden;
+  }
+}
+
+
+/* =========================================================
+   MOBILE SAFETY
+========================================================= */
+
+@media (max-width: 767px) {
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    max-width: 100%;
+  }
+}  

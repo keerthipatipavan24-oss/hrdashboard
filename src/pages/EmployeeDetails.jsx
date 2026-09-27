@@ -1,0 +1,149 @@
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+
+import Sidebar from "../components/Sidebar";
+
+import "./EmployeeDetails.css";
+
+export default function EmployeeDetails() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  const [employee, setEmployee] = useState(null);
+
+  useEffect(() => {
+    const employees =
+      JSON.parse(localStorage.getItem("employees")) || [];
+
+    const foundEmployee = employees.find(
+      (employee) => String(employee.id) === String(id)
+    );
+
+    setEmployee(foundEmployee);
+  }, [id]);
+
+  if (!employee) {
+    return (
+      <div className="employee-details-layout">
+        <Sidebar />
+
+        <main className="employee-details-content">
+          <h1>Employee Not Found</h1>
+
+          <p>
+            The employee record could not be found.
+          </p>
+
+          <button
+            className="back-button"
+            onClick={() => navigate("/employees")}
+          >
+            ← Back to Employees
+          </button>
+        </main>
+      </div>
+    );
+  }
+
+  return (
+    <div className="employee-details-layout">
+
+      <Sidebar />
+
+      <main className="employee-details-content">
+
+        
+
+        <header className="employee-details-header">
+          <h1>Employee Details</h1>
+
+          <p>
+            View complete employee information.
+          </p>
+        </header>
+
+        <section className="employee-details-card">
+
+          <div className="employee-details-top">
+
+            <div className="employee-details-avatar">
+              {employee.name
+                ? employee.name.charAt(0).toUpperCase()
+                : "E"}
+            </div>
+
+            <div>
+              <h2>{employee.name}</h2>
+
+              <p>{employee.designation}</p>
+            </div>
+
+            <span className="employee-details-status">
+              Active
+            </span>
+
+          </div>
+
+          <div className="employee-details-divider"></div>
+
+          <div className="employee-details-grid">
+
+            <div className="employee-detail">
+              <span>Employee ID</span>
+              <strong>{employee.id}</strong>
+            </div>
+
+            <div className="employee-detail">
+              <span>Email</span>
+              <strong>{employee.email}</strong>
+            </div>
+
+            <div className="employee-detail">
+              <span>Phone Number</span>
+              <strong>{employee.phone}</strong>
+            </div>
+
+            <div className="employee-detail">
+              <span>Department</span>
+              <strong>{employee.department}</strong>
+            </div>
+
+            <div className="employee-detail">
+              <span>Designation</span>
+              <strong>{employee.designation}</strong>
+            </div>
+
+            <div className="employee-detail">
+              <span>Joining Date</span>
+              <strong>{employee.joiningDate}</strong>
+            </div>
+
+            <div className="employee-detail">
+              <span>Employment Type</span>
+              <strong>{employee.employmentType}</strong>
+            </div>
+
+          </div>
+
+          <div className="employee-details-divider"></div>
+
+          <div className="employee-details-actions">
+
+            
+
+            <button
+              className="back-details-button"
+              onClick={() => navigate("/employees")}
+            >
+              Back to Employees
+            </button>
+
+          </div>
+
+        </section>
+
+      </main>
+
+    </div>
+  );
+} 

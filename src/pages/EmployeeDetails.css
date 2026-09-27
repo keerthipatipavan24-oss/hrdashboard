@@ -1,0 +1,371 @@
+/* =========================================
+   EMPLOYEE DETAILS PAGE
+   Dashboard Design System
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.employee-details-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f5f7fb;
+  color: #17213d;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.employee-details-content {
+  flex: 1;
+  min-width: 0;
+  padding: 38px 46px 50px;
+  background: #f5f7fb;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.employee-details-header {
+  margin-bottom: 30px;
+}
+
+.employee-details-header h1 {
+  margin: 0;
+
+  font-size: 38px;
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  color: #18233f;
+  letter-spacing: -0.5px;
+}
+
+.employee-details-header p {
+  margin: 10px 0 0;
+
+  font-size: 17px;
+  line-height: 1.5;
+
+  color: #697896;
+}
+
+/* =========================================
+   DETAILS CARD
+========================================= */
+
+.employee-details-card {
+  background: #ffffff;
+
+  border: 1px solid #e0e5ef;
+  border-radius: 16px;
+
+  padding: 34px 36px;
+
+  box-shadow:
+    0 5px 18px rgba(28, 42, 70, 0.04);
+}
+
+/* =========================================
+   EMPLOYEE TOP SECTION
+========================================= */
+
+.employee-details-top {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding-bottom: 30px;
+}
+
+/* =========================================
+   AVATAR
+========================================= */
+
+.employee-details-avatar {
+  width: 78px;
+  height: 78px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eeecff;
+  color: #5146d8;
+
+  font-size: 31px;
+  font-weight: 700;
+}
+
+/* =========================================
+   EMPLOYEE NAME
+========================================= */
+
+.employee-details-main-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.employee-details-main-info h2 {
+  margin: 0;
+
+  font-size: 28px;
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  color: #17213d;
+}
+
+.employee-details-main-info p {
+  margin: 5px 0 0;
+
+  font-size: 16px;
+
+  color: #697896;
+}
+
+/* =========================================
+   ACTIVE STATUS
+========================================= */
+
+.employee-details-status {
+  flex-shrink: 0;
+
+  padding: 9px 17px;
+
+  border-radius: 22px;
+
+  background: #e5f8ee;
+  color: #15834f;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.employee-details-divider {
+  height: 1px;
+
+  background: #e5e9f0;
+
+  margin: 0;
+}
+
+/* =========================================
+   DETAILS GRID
+========================================= */
+
+.employee-details-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 80px;
+  row-gap: 28px;
+
+  padding: 30px 0;
+}
+
+/* =========================================
+   DETAIL ITEM
+========================================= */
+
+.employee-detail-item {
+  min-width: 0;
+}
+
+.employee-detail-item span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 13px;
+
+  color: #7a89a3;
+
+  font-weight: 500;
+}
+
+.employee-detail-item strong {
+  display: block;
+
+  font-size: 15px;
+  line-height: 1.5;
+
+  color: #202c47;
+
+  font-weight: 650;
+
+  word-break: break-word;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.employee-details-footer {
+  display: flex;
+
+  justify-content: flex-end;
+
+  padding-top: 26px;
+
+  border-top: 1px solid #e5e9f0;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+.back-details-button {
+  min-width: 190px;
+  height: 48px;
+  padding: 0 22px;
+
+  background: #ffffff;
+  color: #17233f;
+  margin-top: 15px;
+
+  border: 1px solid #ccd6e5;
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.back-details-button:hover {
+  background: #f0f4ff;
+  color: #4f46e5;
+  border-color: #4f46e5;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.12);
+  transform: translateY(-1px);
+}
+
+.back-details-button:active {
+  transform: translateY(0);
+}
+
+.back-details-button:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+} 
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .employee-details-content {
+    padding: 30px;
+  }
+
+  .employee-details-card {
+    padding: 28px;
+  }
+
+  .employee-details-grid {
+    column-gap: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .employee-details-content {
+    padding: 22px 16px 35px;
+  }
+
+  .employee-details-header h1 {
+    font-size: 31px;
+  }
+
+  .employee-details-header p {
+    font-size: 15px;
+  }
+
+  .employee-details-card {
+    padding: 22px;
+    border-radius: 13px;
+  }
+
+  .employee-details-top {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .employee-details-avatar {
+    width: 64px;
+    height: 64px;
+
+    font-size: 26px;
+  }
+
+  .employee-details-main-info h2 {
+    font-size: 23px;
+  }
+
+  .employee-details-main-info p {
+    font-size: 14px;
+  }
+
+  .employee-details-status {
+    margin-left: auto;
+  }
+
+  .employee-details-grid {
+    grid-template-columns: 1fr;
+
+    row-gap: 22px;
+
+    padding: 25px 0;
+  }
+
+  .employee-details-footer {
+    justify-content: stretch;
+  }
+
+  .back-employees-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .employee-details-top {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+
+  .employee-details-status {
+    grid-column: 1 / -1;
+
+    justify-self: start;
+
+    margin-left: 0;
+  }
+
+  .employee-details-avatar {
+    width: 58px;
+    height: 58px;
+
+    font-size: 24px;
+  }
+
+  .employee-details-main-info h2 {
+    font-size: 21px;
+  }
+} 

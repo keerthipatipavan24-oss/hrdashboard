@@ -1,0 +1,529 @@
+/* =========================================
+   EDIT EMPLOYEE PAGE
+   Dashboard Matching Design
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   LAYOUT
+========================================= */
+
+.edit-employee-layout {
+  min-height: 100vh;
+  display: flex;
+
+  background: #f5f7fb;
+  color: #17213d;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.edit-employee-content {
+  flex: 1;
+  min-width: 0;
+
+  padding: 38px 46px 50px;
+
+  background: #f5f7fb;
+
+  overflow-x: hidden;
+}
+
+/* =========================================
+   PAGE
+========================================= */
+
+.edit-employee-page {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.edit-employee-container {
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.edit-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  min-height: 42px;
+
+  padding: 10px 17px;
+
+  border: 1px solid #dce2ed;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #34415e;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.edit-back-button:hover {
+  background: #f7f8fb;
+  border-color: #c8d0df;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.edit-employee-header {
+  width: 100%;
+
+  margin-bottom: 28px;
+}
+
+.edit-employee-header h1 {
+  margin: 0;
+
+  font-size: 38px;
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  color: #18233f;
+
+  letter-spacing: -0.5px;
+}
+
+.edit-employee-header p {
+  margin: 10px 0 0;
+
+  font-size: 17px;
+  line-height: 1.5;
+
+  color: #697896;
+}
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.edit-employee-form {
+  width: 100%;
+
+  padding: 30px 34px;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e5ef;
+  border-radius: 16px;
+
+  box-shadow: 0 5px 18px rgba(28, 42, 70, 0.04);
+
+  /* IMPORTANT */
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 36px;
+  row-gap: 24px;
+}
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.edit-form-group {
+  width: 100%;
+
+  margin: 0;
+}
+
+/* =========================================
+   LABEL
+========================================= */
+
+.edit-form-group label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #17213d;
+}
+
+/* =========================================
+   INPUT / SELECT
+========================================= */
+
+.edit-form-group input,
+.edit-form-group select {
+  display: block;
+
+  width: 100%;
+
+  height: 60px;
+
+  padding: 0 16px;
+
+  border: 1px solid #d3ddea;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #17213d;
+
+  font-size: 17px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.edit-form-group input:focus,
+.edit-form-group select:focus {
+  border-color: #6257e5;
+
+  box-shadow:
+    0 0 0 3px rgba(98, 87, 229, 0.10);
+}
+
+/* =========================================
+   DATE INPUT
+========================================= */
+
+.edit-form-group input[type="date"] {
+  cursor: pointer;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.edit-field-error {
+  margin: 6px 0 0;
+
+  color: #d93636;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+.edit-input-error {
+  border-color: #e14b4b !important;
+
+  background: #fffafa !important;
+}
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.edit-form-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 6px;
+
+  padding-top: 24px;
+
+  border-top: 1px solid #e5e9f0;
+}
+
+/* =========================================
+   CANCEL BUTTON
+========================================= */
+
+.edit-cancel-button {
+  min-height: 46px;
+
+  padding: 0 22px;
+
+  border: 1px solid #dce2ed;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #34415e;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.edit-cancel-button:hover {
+  background: #f7f8fb;
+
+  border-color: #c8d0df;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   UPDATE BUTTON
+========================================= */
+
+.edit-update-button {
+  min-height: 46px;
+
+  padding: 0 24px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #5146d8;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 14px rgba(81, 70, 216, 0.18);
+
+  transition: 0.2s ease;
+}
+
+.edit-update-button:hover {
+  background: #4439c5;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 8px 17px rgba(81, 70, 216, 0.22);
+}
+
+.edit-update-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .edit-employee-content {
+    padding: 30px;
+  }
+
+  .edit-employee-form {
+    padding: 28px;
+  }
+
+  .edit-form-group input,
+  .edit-form-group select {
+    height: 56px;
+  }
+}
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .edit-employee-content {
+    padding: 28px 22px 40px;
+  }
+
+  .edit-employee-header h1 {
+    font-size: 34px;
+  }
+
+  .edit-employee-header p {
+    font-size: 16px;
+  }
+
+  /* One column */
+  .edit-employee-form {
+    grid-template-columns: 1fr;
+
+    row-gap: 20px;
+
+    padding: 24px;
+  }
+
+  .edit-form-actions {
+    grid-column: auto;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .edit-employee-layout {
+    flex-direction: column;
+  }
+
+  .edit-employee-content {
+    width: 100%;
+
+    padding: 22px 16px 35px;
+  }
+
+  .edit-employee-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .edit-back-button {
+    width: 100%;
+
+    margin-bottom: 20px;
+  }
+
+  .edit-employee-header {
+    margin-bottom: 22px;
+  }
+
+  .edit-employee-header h1 {
+    font-size: 30px;
+  }
+
+  .edit-employee-header p {
+    font-size: 15px;
+  }
+
+  .edit-employee-form {
+    grid-template-columns: 1fr;
+
+    padding: 20px 17px;
+
+    border-radius: 14px;
+
+    row-gap: 18px;
+  }
+
+  .edit-form-group label {
+    font-size: 15px;
+  }
+
+  .edit-form-group input,
+  .edit-form-group select {
+    height: 52px;
+
+    font-size: 16px;
+  }
+
+  .edit-form-actions {
+    grid-column: auto;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 10px;
+  }
+
+  .edit-cancel-button,
+  .edit-update-button {
+    width: 100%;
+
+    min-height: 46px;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .edit-employee-content {
+    padding: 20px 12px 30px;
+  }
+
+  .edit-employee-header h1 {
+    font-size: 27px;
+  }
+
+  .edit-employee-header p {
+    font-size: 14px;
+  }
+
+  .edit-employee-form {
+    padding: 18px 14px;
+
+    border-radius: 12px;
+
+    row-gap: 17px;
+  }
+
+  .edit-form-group label {
+    font-size: 14px;
+  }
+
+  .edit-form-group input,
+  .edit-form-group select {
+    height: 48px;
+
+    padding: 0 13px;
+
+    font-size: 15px;
+  }
+}
+
+/* =========================================
+   REDUCE MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .edit-back-button,
+  .edit-cancel-button,
+  .edit-update-button,
+  .edit-form-group input,
+  .edit-form-group select {
+    transition: none;
+  }
+
+  .edit-back-button:hover,
+  .edit-cancel-button:hover,
+  .edit-update-button:hover {
+    transform: none;
+  }
+} 

@@ -1,0 +1,148 @@
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  max-width: 260px;
+
+  flex: 0 0 260px;
+  flex-shrink: 0;
+
+  height: 100vh;
+  min-height: 100vh;
+
+  padding: 32px 18px;
+
+  background: #17213a;
+  color: #ffffff;
+
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  z-index: 100;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.sidebar-brand {
+  padding: 0 12px;
+  margin-bottom: 32px;
+}
+
+.sidebar-brand h1 {
+  margin: 0;
+
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.sidebar-brand p {
+  margin: 12px 0 0;
+
+  font-size: 12px;
+  letter-spacing: 1.5px;
+
+  color: #b9c8e3;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.sidebar-nav {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.nav-link {
+  width: 100%;
+  min-width: 0;
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 16px;
+
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  white-space: nowrap;
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+  transition: background 0.2s ease;
+}
+
+.nav-link span:first-child {
+  width: 22px;
+  min-width: 22px;
+
+  text-align: center;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link.active {
+  background: #405f99;
+}
+
+/* =========================================================
+   TABLET SIDEBAR
+   768px - 1000px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1000px) {
+
+  .sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 220px !important;
+    min-width: 220px !important;
+    max-width: 220px !important;
+
+    flex: 0 0 220px !important;
+
+    height: 100vh;
+    min-height: 100vh;
+
+    padding: 32px 18px;
+
+    box-sizing: border-box;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+} 

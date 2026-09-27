@@ -1,0 +1,1583 @@
+/* =========================================================
+   HR DASHBOARD
+========================================================= */
+
+.dashboard-layout {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background: #f5f6fa;
+
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   MAIN AREA
+========================================================= */
+
+.dashboard-main {
+  flex: 1 1 auto;
+
+  width: 0;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   APPLICATION HEADER
+========================================================= */
+
+.dashboard-main .app-header {
+  width: 100%;
+  max-width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DASHBOARD CONTENT
+
+   Gap between Header and dashboard content
+========================================================= */
+
+.dashboard-content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  padding: 42px 46px 48px;
+
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   DASHBOARD HEADER
+========================================================= */
+
+.dashboard-header {
+  margin-bottom: 38px;
+}
+
+.dashboard-header h1 {
+  margin: 0 0 10px;
+
+  font-size: 48px;
+  line-height: 1.15;
+
+  font-weight: 700;
+  letter-spacing: -0.8px;
+
+  color: #17172b;
+}
+
+.dashboard-header p {
+  margin: 0;
+
+  font-size: 19px;
+  line-height: 1.5;
+
+  color: #62677a;
+}
+
+
+/* =========================================================
+   HR MANAGEMENT LABEL
+========================================================= */
+
+.dashboard-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #4f46e5;
+
+  font-size: 14px;
+  line-height: 1.2;
+
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   STAT GRID
+========================================================= */
+
+.stats-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   STAT CARD
+========================================================= */
+
+.stat-card {
+  position: relative;
+
+  min-width: 0;
+  min-height: 165px;
+
+  padding: 26px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7ef;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px rgba(30, 30, 60, 0.045);
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+/* =========================================================
+   CARD COLOUR STRIP
+========================================================= */
+
+.stat-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 5px;
+  height: 100%;
+
+  background: #6256d9;
+}
+
+.stat-card:nth-child(1)::before {
+  background: #6256d9;
+}
+
+.stat-card:nth-child(2)::before {
+  background: #159a9c;
+}
+
+.stat-card:nth-child(3)::before {
+  background: #e59b35;
+}
+
+.stat-card:nth-child(4)::before {
+  background: #d65b76;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.stat-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #d8d8ea;
+
+  box-shadow:
+    0 12px 28px rgba(30, 30, 60, 0.09);
+}
+
+
+/* =========================================================
+   STAT CARD CONTENT
+========================================================= */
+
+.stat-card-label {
+  margin-bottom: 17px;
+
+  font-size: 17px;
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  color: #62677a;
+}
+
+.stat-card-number {
+  margin-bottom: 10px;
+
+  font-size: 42px;
+  line-height: 1;
+
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+
+  color: #28254f;
+}
+
+.stat-card-note {
+  font-size: 13px;
+  line-height: 1.4;
+
+  color: #8a8fa1;
+}
+
+
+/* =========================================================
+   LOWER DASHBOARD GRID
+========================================================= */
+
+.dashboard-lower-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(0, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   DASHBOARD PANEL
+========================================================= */
+
+.dashboard-panel {
+  min-width: 0;
+
+  padding: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7ef;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px rgba(30, 30, 60, 0.04);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.panel-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.panel-header h2 {
+  margin: 0 0 6px;
+
+  font-size: 21px;
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  color: #202038;
+}
+
+.panel-header p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: #858a9c;
+}
+
+
+/* =========================================================
+   RECENT EMPLOYEES
+========================================================= */
+
+.recent-employee-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.recent-employee {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-width: 0;
+
+  padding: 12px 8px;
+
+  border-bottom: 1px solid #eef0f5;
+}
+
+.recent-employee:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   EMPLOYEE AVATAR
+========================================================= */
+
+.recent-avatar {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #eeecff;
+
+  color: #6256d9;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   EMPLOYEE INFO
+========================================================= */
+
+.recent-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.recent-info h3 {
+  margin: 0 0 4px;
+
+  font-size: 15px;
+  line-height: 1.3;
+
+  font-weight: 600;
+
+  color: #29293d;
+
+  overflow-wrap: anywhere;
+}
+
+.recent-info p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.3;
+
+  color: #858a9c;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   DEPARTMENT BADGE
+========================================================= */
+
+.employee-department {
+  flex-shrink: 0;
+
+  max-width: 130px;
+
+  padding: 5px 9px;
+
+  border-radius: 7px;
+
+  background: #f0fafa;
+
+  color: #159a9c;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   ATTENDANCE
+========================================================= */
+
+.attendance-overview {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.attendance-item {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 15px;
+
+  border-radius: 10px;
+
+  background: #f8f9fc;
+}
+
+.attendance-item-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 15px;
+
+  color: #44485a;
+}
+
+.attendance-item strong {
+  font-size: 16px;
+
+  color: #25263a;
+}
+
+
+/* =========================================================
+   ATTENDANCE DOTS
+========================================================= */
+
+.attendance-dot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+
+.attendance-dot.present {
+  background: #20a66a;
+}
+
+.attendance-dot.absent {
+  background: #dc5b65;
+}
+
+.attendance-dot.leave {
+  background: #e59b35;
+}
+
+
+/* =========================================================
+   ATTENDANCE TOTAL
+========================================================= */
+
+.attendance-total {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 18px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #e8eaf0;
+}
+
+.attendance-total span {
+  font-size: 14px;
+
+  color: #74798b;
+}
+
+.attendance-total strong {
+  font-size: 18px;
+
+  color: #28254f;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.dashboard-empty {
+  min-height: 190px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.dashboard-empty h3 {
+  margin: 0 0 7px;
+
+  font-size: 18px;
+
+  color: #29293d;
+}
+
+.dashboard-empty p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #858a9c;
+}
+
+/* =========================================================
+   DASHBOARD RESPONSIVE
+   3 VIEWS ONLY
+   Desktop / Tablet / Mobile
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+   601px - 1000px
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 1000px) {
+
+  /* ---------- DASHBOARD LAYOUT ---------- */
+
+  .dashboard-layout {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+  }
+
+  /* ---------- SIDEBAR ---------- */
+
+  .dashboard-layout > .sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+
+    height: 100vh;
+    min-height: 100vh;
+
+    margin: 0;
+
+    z-index: 9999;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    box-sizing: border-box;
+  }
+
+  /* ---------- MAIN ---------- */
+
+  .dashboard-main {
+    width: calc(100% - 200px);
+
+    min-width: 0;
+    min-height: 100vh;
+
+    margin: 0 0 0 200px;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+  }
+
+  /* ---------- HEADER ---------- */
+
+  .dashboard-main .app-header {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+  }
+
+  /* ---------- CONTENT ---------- */
+
+  .dashboard-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 32px 24px 40px;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+  }
+
+  /* ---------- TITLE ---------- */
+
+  .dashboard-header {
+    margin-bottom: 30px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .dashboard-header p {
+    font-size: 16px;
+  }
+
+  /* ---------- STAT CARDS ---------- */
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 22px;
+  }
+
+  .stat-card {
+    min-height: 145px;
+
+    padding: 22px;
+  }
+
+  .stat-card-label {
+    font-size: 15px;
+  }
+
+  .stat-card-number {
+    font-size: 38px;
+  }
+
+  /* ---------- LOWER SECTION ---------- */
+
+  .dashboard-lower-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .dashboard-panel {
+    padding: 22px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   600px AND BELOW
+========================================================= */
+
+@media (max-width: 600px) {
+
+  /* ---------- PAGE ---------- */
+
+  .dashboard-layout {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+  }
+
+
+  /* ---------- SIDEBAR ---------- */
+
+  .dashboard-layout > .sidebar {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto;
+    min-height: auto;
+
+    margin: 0;
+
+    z-index: 9999;
+
+    overflow: visible;
+
+    flex: 0 0 auto;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ---------- MAIN ---------- */
+
+  .dashboard-main {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0;
+    min-height: 0;
+
+    margin: 0 !important;
+    padding: 0;
+
+    flex: 0 0 auto;
+
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ---------- HEADER ---------- */
+
+  .dashboard-main .app-header {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* ---------- CONTENT ---------- */
+
+  .dashboard-content {
+    width: 100%;
+    max-width: 100%;
+
+    min-width: 0;
+
+    padding: 28px 16px 32px !important;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+  }
+
+
+  /* ---------- DASHBOARD TITLE ---------- */
+
+  .dashboard-header {
+    width: 100%;
+
+    margin-bottom: 26px;
+  }
+
+  .dashboard-label {
+    font-size: 12px;
+
+    margin-bottom: 7px;
+  }
+
+  .dashboard-header h1 {
+    margin-bottom: 8px;
+
+    font-size: 30px;
+    line-height: 1.2;
+
+    letter-spacing: -0.4px;
+  }
+
+  .dashboard-header p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+
+  /* ---------- STAT GRID ---------- */
+
+  .stats-grid {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+  }
+
+
+  /* ---------- STAT CARD ---------- */
+
+  .stat-card {
+    width: 100%;
+    max-width: 100%;
+
+    min-width: 0;
+    min-height: 130px;
+
+    padding: 20px;
+
+    border-radius: 14px;
+  }
+
+  .stat-card-label {
+    margin-bottom: 13px;
+
+    font-size: 15px;
+  }
+
+  .stat-card-number {
+    font-size: 34px;
+  }
+
+  .stat-card-note {
+    font-size: 12px;
+  }
+
+
+  /* ---------- LOWER GRID ---------- */
+
+  .dashboard-lower-grid {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+
+  /* ---------- PANELS ---------- */
+
+  .dashboard-panel {
+    width: 100%;
+    max-width: 100%;
+
+    min-width: 0;
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+  }
+
+
+  /* ---------- PANEL HEADER ---------- */
+
+  .panel-header {
+    margin-bottom: 18px;
+  }
+
+  .panel-header h2 {
+    font-size: 19px;
+  }
+
+  .panel-header p {
+    font-size: 13px;
+  }
+
+
+  /* ---------- RECENT EMPLOYEES ---------- */
+
+  .recent-employee {
+    gap: 10px;
+
+    padding: 11px 4px;
+  }
+
+  .recent-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+  }
+
+  .recent-info h3 {
+    font-size: 14px;
+  }
+
+  .recent-info p {
+    font-size: 12px;
+  }
+
+
+  /* ---------- DEPARTMENT BADGE ---------- */
+
+  .employee-department {
+    max-width: 90px;
+
+    padding: 4px 7px;
+
+    font-size: 10px;
+  }
+
+
+  /* ---------- ATTENDANCE ---------- */
+
+  .attendance-item {
+    padding: 12px;
+  }
+
+  .attendance-item-left {
+    font-size: 13px;
+  }
+
+  .attendance-item strong {
+    font-size: 14px;
+  }
+
+  .attendance-total strong {
+    font-size: 17px;
+  }
+} 
+
+/* =========================================================
+   FINAL RESPONSIVE FIX
+   Applies after all previous dashboard styles
+========================================================= */
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   768px - 1199px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  /* ---------- MAIN LAYOUT ---------- */
+
+  .dashboard-layout {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+
+  /* ---------- SIDEBAR ---------- */
+
+  .dashboard-layout > .sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+
+    height: 100vh;
+
+    z-index: 100;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+
+  /* ---------- MAIN ---------- */
+
+  .dashboard-main {
+    width: calc(100% - 220px);
+    max-width: calc(100% - 220px);
+
+    min-width: 0;
+
+    margin-left: 220px;
+
+    overflow-x: hidden;
+  }
+
+
+  /* ---------- CONTENT ---------- */
+
+  .dashboard-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 32px 24px 40px;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+  }
+
+
+  /* ---------- HEADER ---------- */
+
+  .dashboard-header {
+    margin-bottom: 28px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 38px;
+  }
+
+  .dashboard-header p {
+    font-size: 16px;
+  }
+
+
+  /* ---------- STAT CARDS ---------- */
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+    width: 100%;
+  }
+
+  .stat-card {
+    min-width: 0;
+    width: 100%;
+
+    min-height: 145px;
+
+    padding: 22px;
+  }
+
+
+  /* ---------- LOWER SECTION ---------- */
+
+  .dashboard-lower-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    width: 100%;
+  }
+
+  .dashboard-panel {
+    width: 100%;
+    min-width: 0;
+
+    padding: 22px;
+
+    box-sizing: border-box;
+  }
+}
+
+
+/* =========================================================
+   TABLET - SMALLER WIDTH
+   768px - 900px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 900px) {
+
+  .dashboard-layout > .sidebar {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+  }
+
+  .dashboard-main {
+    width: calc(100% - 200px);
+    max-width: calc(100% - 200px);
+
+    margin-left: 200px;
+  }
+
+  .dashboard-content {
+    padding: 28px 20px 36px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 34px;
+  }
+
+  .stats-grid {
+    gap: 14px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   767px AND BELOW
+========================================================= */
+
+@media (max-width: 767px) {
+
+  /* ---------- PAGE ---------- */
+
+  .dashboard-layout {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+  }
+
+
+  /* ---------- SIDEBAR ---------- */
+
+  .dashboard-layout > .sidebar {
+    position: relative;
+
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto;
+    min-height: auto;
+
+    margin: 0;
+
+    z-index: 10;
+
+    overflow: visible;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ---------- MAIN ---------- */
+
+  .dashboard-main {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0;
+
+    margin: 0 !important;
+    padding: 0;
+
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ---------- CONTENT ---------- */
+
+  .dashboard-content {
+    width: 100%;
+    max-width: 100%;
+
+    min-width: 0;
+
+    padding: 26px 16px 32px !important;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+  }
+
+
+  /* ---------- TITLE ---------- */
+
+  .dashboard-header {
+    width: 100%;
+
+    margin-bottom: 24px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.4px;
+  }
+
+  .dashboard-header p {
+    font-size: 14px;
+
+    line-height: 1.5;
+  }
+
+
+  /* ---------- STAT GRID ---------- */
+
+  .stats-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+  }
+
+
+  /* ---------- STAT CARD ---------- */
+
+  .stat-card {
+    width: 100%;
+    max-width: 100%;
+
+    min-width: 0;
+
+    min-height: 130px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ---------- LOWER GRID ---------- */
+
+  .dashboard-lower-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+
+  /* ---------- PANEL ---------- */
+
+  .dashboard-panel {
+    width: 100%;
+    max-width: 100%;
+
+    min-width: 0;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+  }
+
+
+  /* ---------- PANEL HEADER ---------- */
+
+  .panel-header {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+  }
+
+
+  /* ---------- EMPLOYEE ROW ---------- */
+
+  .recent-employee {
+    width: 100%;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 11px 4px;
+
+    box-sizing: border-box;
+  }
+
+  .recent-info {
+    min-width: 0;
+    flex: 1;
+  }
+
+
+  /* ---------- BADGE ---------- */
+
+  .employee-department {
+    max-width: 90px;
+
+    flex-shrink: 1;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+  }
+
+
+  /* ---------- ATTENDANCE ---------- */
+
+  .attendance-item {
+    width: 100%;
+
+    min-width: 0;
+
+    box-sizing: border-box;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   430px AND BELOW
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .dashboard-content {
+    padding: 22px 12px 28px !important;
+  }
+
+  .dashboard-header h1 {
+    font-size: 27px;
+  }
+
+  .dashboard-header p {
+    font-size: 13px;
+  }
+
+  .stat-card {
+    padding: 18px;
+
+    min-height: 120px;
+  }
+
+  .stat-card-label {
+    font-size: 14px;
+  }
+
+  .stat-card-number {
+    font-size: 32px;
+  }
+
+  .dashboard-panel {
+    padding: 15px;
+  }
+
+  .panel-header h2 {
+    font-size: 18px;
+  }
+
+  .recent-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .employee-department {
+    max-width: 75px;
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   VERY VERY SMALL
+   374px AND BELOW
+========================================================= */
+
+@media (max-width: 374px) {
+
+  .dashboard-content {
+    padding: 20px 10px 25px !important;
+  }
+
+  .dashboard-header h1 {
+    font-size: 25px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .stat-card-number {
+    font-size: 30px;
+  }
+
+  .dashboard-panel {
+    padding: 13px;
+  }
+} 
+
+/* =========================================================
+   FINAL DESKTOP FIX
+   1200px AND ABOVE
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  /* Main layout */
+  .dashboard-layout {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+  }
+
+
+  /* Fixed sidebar takes 260px of screen */
+  .dashboard-layout > .sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 260px;
+    min-width: 260px;
+    max-width: 260px;
+
+    height: 100vh;
+
+    z-index: 100;
+  }
+
+
+  /* Main content must start AFTER sidebar */
+  .dashboard-main {
+    width: calc(100% - 260px);
+    max-width: calc(100% - 260px);
+
+    min-width: 0;
+
+    margin: 0 0 0 260px;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+  }
+
+
+  /* Header */
+  .dashboard-main .app-header {
+    width: 100%;
+    max-width: 100%;
+
+    box-sizing: border-box;
+  }
+
+
+  /* Dashboard content */
+  .dashboard-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 42px 46px 48px;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+  }
+
+
+  /* Stats */
+  .stats-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* Lower dashboard */
+  .dashboard-lower-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 1.35fr)
+      minmax(0, 1fr);
+
+    gap: 20px;
+
+    box-sizing: border-box;
+  }
+} 

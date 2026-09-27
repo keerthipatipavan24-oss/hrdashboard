@@ -1,0 +1,347 @@
+/* ==========================================
+   EMPLOYEE FORM
+========================================== */
+
+.employee-form-card {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 28px 34px;
+
+  padding: 34px 38px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe5ef;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 28px rgba(15, 23, 42, 0.06);
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   FORM GROUP
+========================================== */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+
+/* ==========================================
+   LABEL
+========================================== */
+
+.form-group label {
+  margin-bottom: 9px;
+
+  font-size: 16px;
+
+  font-weight: 650;
+
+  color: #172554;
+}
+
+
+/* ==========================================
+   INPUT + SELECT
+========================================== */
+
+.form-group input,
+.form-group select {
+  width: 100%;
+
+  min-height: 54px;
+
+  padding: 0 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cfd8e6;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #172033;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* ==========================================
+   INPUT PLACEHOLDER
+========================================== */
+
+.form-group input::placeholder {
+  color: #8a96a8;
+}
+
+
+/* ==========================================
+   FOCUS
+========================================== */
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #5746d8;
+
+  box-shadow:
+    0 0 0 3px rgba(87, 70, 216, 0.12);
+
+  background: #ffffff;
+}
+
+
+/* ==========================================
+   SELECT
+========================================== */
+
+.form-group select {
+  cursor: pointer;
+
+  appearance: auto;
+}
+
+
+/* ==========================================
+   DATE INPUT
+========================================== */
+
+.form-group input[type="date"] {
+  cursor: pointer;
+}
+
+
+/* ==========================================
+   ERROR INPUT
+========================================== */
+
+.form-group input.input-error,
+.form-group select.input-error {
+  border-color: #ef4444;
+
+  background: #fffafa;
+}
+
+
+/* ==========================================
+   ERROR MESSAGE
+========================================== */
+
+.field-error {
+  margin: 7px 0 0;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  color: #dc2626;
+}
+
+
+/* ==========================================
+   BUTTON AREA
+========================================== */
+
+.employee-form-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 6px;
+
+  padding-top: 26px;
+
+  border-top: 1px solid #e5eaf1;
+}
+
+
+/* ==========================================
+   CANCEL BUTTON
+========================================== */
+
+.form-cancel-button {
+  min-width: 120px;
+
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  border: 1px solid #cfd8e6;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #334155;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.form-cancel-button:hover {
+  background: #f8fafc;
+
+  border-color: #b8c4d5;
+
+  transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   SAVE BUTTON
+========================================== */
+
+.form-save-button {
+  min-width: 150px;
+
+  min-height: 48px;
+
+  padding: 0 24px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #5146d8;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 14px rgba(81, 70, 216, 0.22);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-save-button:hover {
+  background: #4338ca;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 18px rgba(81, 70, 216, 0.28);
+}
+
+.form-save-button:active {
+  transform: translateY(0);
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+  .employee-form-card {
+    grid-template-columns: 1fr;
+
+    padding: 28px;
+  }
+
+  .employee-form-actions {
+    grid-column: auto;
+  }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+  .employee-form-card {
+    padding: 22px 18px;
+
+    gap: 22px;
+
+    border-radius: 14px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
+
+  .form-group input,
+  .form-group select {
+    min-height: 50px;
+
+    font-size: 15px;
+  }
+
+  .employee-form-actions {
+    flex-direction: column-reverse;
+
+    align-items: stretch;
+
+    gap: 10px;
+
+    padding-top: 22px;
+  }
+
+  .form-cancel-button,
+  .form-save-button {
+    width: 100%;
+  }
+}
+
+
+/* ==========================================
+   REDUCE MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .form-group input,
+  .form-group select,
+  .form-cancel-button,
+  .form-save-button {
+    transition: none;
+  }
+
+  .form-cancel-button:hover,
+  .form-save-button:hover {
+    transform: none;
+  }
+} 

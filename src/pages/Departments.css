@@ -1,0 +1,731 @@
+/* =========================================================
+   DEPARTMENTS PAGE
+========================================================= */
+
+.departments-main > .page-content.departments-content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  padding: 42px 46px 50px;
+
+  box-sizing: border-box; 
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.departments-header {
+  margin: 0 0 34px;
+}
+
+.departments-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #4f46e5;
+
+  font-size: 14px;
+  line-height: 1.2;
+
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.departments-header h1 {
+  margin: 0 0 10px;
+
+  color: #17172b;
+
+  font-size: 44px;
+  line-height: 1.15;
+
+  font-weight: 700;
+  letter-spacing: -0.7px;
+}
+
+.departments-header p {
+  margin: 0;
+
+  color: #62677a;
+
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   DEPARTMENT SECTION
+========================================================= */
+
+.department-section {
+  width: 100%;
+
+  padding: 26px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e7ef;
+  border-radius: 15px;
+
+  box-shadow: 0 5px 18px rgba(30, 30, 60, 0.04);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.department-section-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 22px;
+}
+
+.department-section-header h2 {
+  margin: 0 0 5px;
+
+  color: #202038;
+
+  font-size: 21px;
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+.department-section-header p {
+  margin: 0;
+
+  color: #858a9c;
+
+  font-size: 14px;
+}
+
+.department-count {
+  flex-shrink: 0;
+
+  padding: 7px 11px;
+
+  border-radius: 8px;
+
+  background: #f0f0ff;
+
+  color: #4f46e5;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.department-search-area {
+  width: 100%;
+
+  margin-bottom: 24px;
+}
+
+.department-search {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 14px;
+
+  border: 1px solid #e1e5ed;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #f8f9fc;
+
+  color: #293056;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+}
+
+.department-search:focus {
+  border-color: #6256d9;
+
+  background: #ffffff;
+}
+
+.department-search::placeholder {
+  color: #9aa3b2;
+}
+
+
+/* =========================================================
+   DEPARTMENT GRID
+========================================================= */
+
+.department-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   DEPARTMENT CARD
+========================================================= */
+
+.department-card {
+  min-width: 0;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4e7ef;
+  border-radius: 13px;
+
+  box-shadow: 0 4px 14px rgba(30, 30, 60, 0.035);
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.department-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #d7daea;
+
+  box-shadow: 0 9px 22px rgba(30, 30, 60, 0.08);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.department-card-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-width: 0;
+}
+
+.department-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  font-size: 21px;
+}
+
+.department-purple {
+  background: #eeecff;
+}
+
+.department-blue {
+  background: #e9f3ff;
+}
+
+.department-green {
+  background: #e8f8f1;
+}
+
+.department-orange {
+  background: #fff3e4;
+}
+
+.department-pink {
+  background: #ffedf2;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.department-card-title {
+  min-width: 0;
+}
+
+.department-card-title h3 {
+  margin: 0 0 5px;
+
+  color: #29293d;
+
+  font-size: 17px;
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.department-card-title p {
+  margin: 0;
+
+  color: #858a9c;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.department-divider {
+  width: 100%;
+
+  height: 1px;
+
+  margin: 18px 0;
+
+  background: #eef0f5;
+}
+
+
+/* =========================================================
+   MEMBERS
+========================================================= */
+
+.department-members {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+.members-label {
+  margin-bottom: 2px;
+
+  color: #74798b;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.6px;
+}
+
+.department-member {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 0;
+}
+
+.member-avatar {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #eeecff;
+
+  color: #6256d9;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.member-info {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.member-info strong {
+  color: #29293d;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.member-info span {
+  color: #858a9c;
+
+  font-size: 11px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   MORE MEMBERS
+========================================================= */
+
+.more-members {
+  margin-top: 14px;
+
+  padding-top: 12px;
+
+  border-top: 1px solid #eef0f5;
+
+  color: #6256d9;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.department-empty {
+  min-height: 220px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  text-align: center;
+
+  border: 1px dashed #dfe3eb;
+
+  border-radius: 12px;
+
+  background: #fafbfe;
+
+  box-sizing: border-box;
+}
+
+.empty-icon {
+  margin-bottom: 12px;
+
+  font-size: 38px;
+}
+
+.department-empty h3 {
+  margin: 0 0 7px;
+
+  color: #29293d;
+
+  font-size: 18px;
+}
+
+.department-empty p {
+  max-width: 420px;
+
+  margin: 0;
+
+  color: #858a9c;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+/* =========================================================
+   FINAL DEPARTMENTS RESPONSIVE LAYOUT
+   3 VIEWS:
+   Desktop | Tablet | Mobile
+========================================================= */
+
+/* =========================================================
+   DESKTOP
+   1001px and above
+========================================================= */
+
+@media (min-width: 1001px) {
+
+  .departments-main {
+    width: calc(100% - 260px) !important;
+    min-width: 0 !important;
+    margin-left: 260px !important;
+    box-sizing: border-box;
+  }
+
+  .departments-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 42px 46px 50px !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .department-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   TABLET
+   768px - 1000px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1000px) {
+
+  /* MAIN */
+  .departments-main {
+    width: calc(100% - 220px) !important;
+    min-width: 0 !important;
+
+    margin-left: 220px !important;
+    padding: 0 !important;
+
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+
+  /* CONTENT */
+  .departments-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    padding: 28px 24px 35px !important;
+
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+
+  /* HEADER */
+  .departments-header {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .departments-header h1 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .departments-header p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+
+  /* SECTION */
+  .department-section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+
+  /* DEPARTMENT GRID */
+  .department-grid {
+    width: 100%;
+    min-width: 0;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* CARD */
+  .department-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+} 
+
+
+/* =========================================================
+   MOBILE
+   600px and below
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .departments-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin-left: 0 !important;
+
+    box-sizing: border-box;
+  }
+
+  .departments-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    padding: 24px 14px 30px !important;
+
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .departments-header {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .departments-header h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .departments-header p {
+    font-size: 14px;
+  }
+
+  .department-section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 18px;
+
+    box-sizing: border-box;
+  }
+
+  .department-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .department-count {
+    align-self: flex-start;
+  }
+
+  .department-search {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .department-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .department-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    padding: 17px;
+    box-sizing: border-box;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   430px and below
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .departments-content {
+    padding: 20px 12px 28px !important;
+  }
+
+  .departments-header h1 {
+    font-size: 27px;
+  }
+
+  .departments-header p {
+    font-size: 13px;
+  }
+
+  .department-section {
+    padding: 15px;
+  }
+
+  .department-card {
+    padding: 15px;
+  }
+
+  .department-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .department-card-title h3 {
+    font-size: 15px;
+  }
+} 
