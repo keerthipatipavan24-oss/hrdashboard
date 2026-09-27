@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 import Sidebar from "../components/Sidebar";
 import Header from "./Header";
-
 import Toast from "./Toast";
 
 import "./Employees.css";
@@ -399,28 +398,27 @@ export default function Employees() {
 
         <main className="employees-content">
 
-          {/* HEADER */}
+          {/* PAGE HEADER */}
 
-          <header className="employees-header">
+          <div className="employees-header">
 
             <div>
-              <div>
-                <span className="employees-label">
-                  HR MANAGEMENT
-                </span>
-              </div>
+
+              <span className="employees-label">
+                HR MANAGEMENT
+              </span>
 
               <h1>
                 Employees
               </h1>
 
               <p>
-                Manage employee information
-                and records.
+                Manage employee information and records.
               </p>
+
             </div>
 
-          </header>
+          </div>
 
           {/* EMPLOYEE SECTION */}
 
@@ -429,6 +427,7 @@ export default function Employees() {
             <div className="employee-section-title">
 
               <div>
+
                 <h2>
                   Employee List
                 </h2>
@@ -436,6 +435,7 @@ export default function Employees() {
                 <p>
                   View and manage all employees.
                 </p>
+
               </div>
 
               <button
