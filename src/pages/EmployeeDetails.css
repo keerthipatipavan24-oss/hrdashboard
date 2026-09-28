@@ -332,14 +332,26 @@
 /* =========================================================
    TABLET
    768px - 1000px
+   Sidebar = 220px
 ========================================================= */
 
 @media (min-width: 768px) and (max-width: 1000px) {
 
+  .employee-details-layout {
+    width: 100%;
+    min-width: 0;
+  }
+
   .employee-details-content {
     width: calc(100% - 220px);
+    max-width: calc(100% - 220px);
+
     margin-left: 220px;
+
     padding: 30px 24px 40px;
+
+    box-sizing: border-box;
+    min-width: 0;
   }
 
   .employee-details-header {
@@ -348,6 +360,7 @@
 
   .employee-details-header h1 {
     font-size: 34px;
+    line-height: 1.2;
   }
 
   .employee-details-header p {
@@ -357,7 +370,10 @@
   .employee-details-card {
     width: 100%;
     max-width: 100%;
+
     padding: 26px;
+
+    box-sizing: border-box;
   }
 
   .employee-details-grid {
@@ -370,32 +386,71 @@
 /* =========================================================
    MOBILE
    767px and below
+   Sidebar = TOP
+   Content = BELOW SIDEBAR
 ========================================================= */
 
 @media (max-width: 767px) {
 
-  /* Main page */
   .employee-details-layout {
-    display: block;
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
     min-width: 0;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
 
-  /* Hide desktop sidebar on mobile */
-  .employee-details-layout > aside {
-    display: none;
+  /* -------------------------------------------------------
+     SIDEBAR
+     Keep sidebar visible on mobile
+  ------------------------------------------------------- */
+
+  .employee-details-layout .sidebar {
+    display: block;
+
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+
+    flex: 0 0 auto !important;
+
+    box-sizing: border-box;
+
+    overflow: visible !important;
   }
 
 
-  /* Main content */
+  /* -------------------------------------------------------
+     MAIN CONTENT
+  ------------------------------------------------------- */
+
   .employee-details-content {
     width: 100%;
     max-width: 100%;
     min-width: 0;
 
-    margin-left: 0;
-
+    margin: 0;
     padding: 20px 14px 30px;
 
     box-sizing: border-box;
@@ -404,7 +459,10 @@
   }
 
 
-  /* Page header */
+  /* -------------------------------------------------------
+     PAGE HEADER
+  ------------------------------------------------------- */
+
   .employee-details-header {
     margin-bottom: 22px;
   }
@@ -422,7 +480,10 @@
   }
 
 
-  /* Employee card */
+  /* -------------------------------------------------------
+     EMPLOYEE CARD
+  ------------------------------------------------------- */
+
   .employee-details-card {
     width: 100%;
     max-width: 100%;
@@ -435,7 +496,10 @@
   }
 
 
-  /* Employee top section */
+  /* -------------------------------------------------------
+     EMPLOYEE TOP SECTION
+  ------------------------------------------------------- */
+
   .employee-details-top {
     display: flex;
 
@@ -445,23 +509,18 @@
 
     gap: 12px;
 
-    width: 100%;
     min-width: 0;
   }
 
-
-  /* Avatar */
   .employee-details-avatar {
     width: 60px;
     height: 60px;
 
-    flex-shrink: 0;
+    flex: 0 0 60px;
 
     font-size: 25px;
   }
 
-
-  /* Name + designation */
   .employee-details-top > div:not(.employee-details-avatar) {
     flex: 1;
     min-width: 0;
@@ -480,21 +539,22 @@
     overflow-wrap: anywhere;
   }
 
-
-  /* Status */
   .employee-details-status {
     margin-left: auto;
 
     padding: 7px 12px;
 
     font-size: 12px;
-
-    white-space: nowrap;
   }
 
 
-  /* Employee information */
+  /* -------------------------------------------------------
+     DETAILS GRID
+  ------------------------------------------------------- */
+
   .employee-details-grid {
+    display: grid;
+
     grid-template-columns: 1fr;
 
     column-gap: 0;
@@ -502,21 +562,23 @@
 
     padding: 24px 0;
 
-    width: 100%;
+    min-width: 0;
   }
 
+  .employee-detail {
+    min-width: 0;
+  }
 
-  /* Detail labels */
   .employee-detail span {
+    display: block;
+
     font-size: 12px;
 
     margin-bottom: 5px;
   }
 
-
-  /* Detail values */
   .employee-detail strong {
-    width: 100%;
+    display: block;
 
     font-size: 14px;
     line-height: 1.5;
@@ -526,15 +588,18 @@
   }
 
 
-  /* Actions */
+  /* -------------------------------------------------------
+     ACTION BUTTON
+  ------------------------------------------------------- */
+
   .employee-details-actions {
+    width: 100%;
+
     justify-content: stretch;
 
     padding-top: 20px;
   }
 
-
-  /* Back button */
   .back-details-button {
     width: 100%;
     min-width: 0;
@@ -555,12 +620,6 @@
     padding: 18px 10px 28px;
   }
 
-
-  /* Page header */
-  .employee-details-header {
-    margin-bottom: 20px;
-  }
-
   .employee-details-header h1 {
     font-size: 27px;
   }
@@ -569,16 +628,10 @@
     font-size: 13px;
   }
 
-
-  /* Card */
   .employee-details-card {
     padding: 17px 13px;
-
-    border-radius: 12px;
   }
 
-
-  /* Employee top */
   .employee-details-top {
     display: grid;
 
@@ -587,8 +640,6 @@
     gap: 11px;
   }
 
-
-  /* Avatar */
   .employee-details-avatar {
     width: 54px;
     height: 54px;
@@ -596,8 +647,6 @@
     font-size: 23px;
   }
 
-
-  /* Name */
   .employee-details-top > div:not(.employee-details-avatar) h2 {
     font-size: 19px;
   }
@@ -606,8 +655,6 @@
     font-size: 13px;
   }
 
-
-  /* Status moves below */
   .employee-details-status {
     grid-column: 1 / -1;
 
@@ -616,12 +663,8 @@
     margin-left: 0;
   }
 
-
-  /* Details */
   .employee-details-grid {
     row-gap: 18px;
-
-    padding: 22px 0;
   }
 }
 
@@ -637,50 +680,19 @@
     padding: 16px 8px 25px;
   }
 
-
   .employee-details-card {
     padding: 15px 11px;
   }
-
 
   .employee-details-header h1 {
     font-size: 25px;
   }
 
-
-  .employee-details-header p {
-    font-size: 12.5px;
-  }
-
-
-  .employee-details-top {
-    gap: 9px;
-  }
-
-
   .employee-details-top > div:not(.employee-details-avatar) h2 {
     font-size: 18px;
   }
 
-
-  .employee-details-top > div:not(.employee-details-avatar) p {
-    font-size: 12px;
-  }
-
-
   .employee-detail strong {
     font-size: 13px;
-  }
-
-
-  .employee-detail span {
-    font-size: 11.5px;
-  }
-
-
-  .back-details-button {
-    height: 42px;
-
-    font-size: 14px;
   }
 } 
