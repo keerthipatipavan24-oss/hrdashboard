@@ -578,42 +578,4 @@
   .employee-detail strong {
     font-size: 13px;
   }
-} @media (max-width: 766px) {
-
-  .employee-details-layout {
-    display: block;
-    width: 100%;
-  }
-
-  .employee-details-layout .sidebar {
-    display: none;
-  }
-
-  .employee-details-content {
-    width: 100%;
-    margin: 0;
-    padding: 12px;
-    box-sizing: border-box;
-    min-width: 0;
-    overflow-x: hidden;
-  }
-
-  .employee-details-header h1 {
-    font-size: 28px;
-  }
-
-  .employee-details-card {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .employee-details-top {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .employee-details-grid {
-    grid-template-columns: 1fr;
-  }
-
 } 
