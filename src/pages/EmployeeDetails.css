@@ -329,10 +329,8 @@
     0 0 0 3px rgba(79, 70, 229, 0.15);
 }
 
-
 /* =========================================================
    TABLET
-   Sidebar = 220px
    768px - 1000px
 ========================================================= */
 
@@ -340,9 +338,7 @@
 
   .employee-details-content {
     width: calc(100% - 220px);
-
     margin-left: 220px;
-
     padding: 30px 24px 40px;
   }
 
@@ -360,7 +356,6 @@
 
   .employee-details-card {
     max-width: 100%;
-
     padding: 26px;
   }
 
@@ -381,6 +376,17 @@
   .employee-details-layout {
     width: 100%;
     min-width: 0;
+    display: block;
+  }
+
+  /*
+    Hide the sidebar on mobile.
+    This prevents the fixed sidebar from taking
+    space and pushing the page content sideways.
+  */
+
+  .employee-details-layout > aside {
+    display: none;
   }
 
   .employee-details-content {
@@ -389,9 +395,9 @@
     min-width: 0;
 
     margin-left: 0;
+    padding: 20px 14px 30px;
 
-    padding: 24px 14px 30px;
-
+    box-sizing: border-box;
     overflow-x: hidden;
   }
 
@@ -406,7 +412,6 @@
 
   .employee-details-header p {
     margin-top: 8px;
-
     font-size: 14px;
     line-height: 1.5;
   }
@@ -422,16 +427,13 @@
 
   .employee-details-top {
     align-items: flex-start;
-
     flex-wrap: wrap;
-
     gap: 12px;
   }
 
   .employee-details-avatar {
     width: 60px;
     height: 60px;
-
     font-size: 25px;
   }
 
@@ -451,9 +453,7 @@
 
   .employee-details-status {
     margin-left: auto;
-
     padding: 7px 12px;
-
     font-size: 12px;
   }
 
@@ -468,7 +468,6 @@
 
   .employee-detail span {
     font-size: 12px;
-
     margin-bottom: 5px;
   }
 
@@ -479,14 +478,12 @@
 
   .employee-details-actions {
     justify-content: stretch;
-
     padding-top: 20px;
   }
 
   .back-details-button {
     width: 100%;
     min-width: 0;
-
     height: 44px;
   }
 }
@@ -500,7 +497,7 @@
 @media (max-width: 430px) {
 
   .employee-details-content {
-    padding: 20px 10px 28px;
+    padding: 18px 10px 28px;
   }
 
   .employee-details-header h1 {
@@ -517,16 +514,13 @@
 
   .employee-details-top {
     display: grid;
-
     grid-template-columns: auto 1fr;
-
     gap: 11px;
   }
 
   .employee-details-avatar {
     width: 54px;
     height: 54px;
-
     font-size: 23px;
   }
 
@@ -540,9 +534,7 @@
 
   .employee-details-status {
     grid-column: 1 / -1;
-
     justify-self: start;
-
     margin-left: 0;
   }
 
@@ -560,7 +552,7 @@
 @media (max-width: 374px) {
 
   .employee-details-content {
-    padding: 18px 8px 25px;
+    padding: 16px 8px 25px;
   }
 
   .employee-details-card {
