@@ -75,7 +75,7 @@ export default function EmployeeDetails() {
 
       <main className="employee-details-content">
 
-        <Header />
+        <Header pageName="Employees" />
 
         {/* PAGE HEADER */}
 
