@@ -127,7 +127,7 @@ export default function Leave() {
 
       <div className="leave-main">
 
-        <Header /> 
+        <Header pageName="Leave" /> 
 
       <main className="leave-content">
 

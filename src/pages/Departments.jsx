@@ -139,7 +139,7 @@ export default function Departments() {
 
       <div className="departments-main">
 
-        <Header />
+        <Header pageName="Departments" />
 
         <main className="page-content departments-content">
 

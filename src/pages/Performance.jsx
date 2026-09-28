@@ -120,7 +120,7 @@ export default function Performance() {
       <Sidebar />
 
       <div className="performance-main">
-        <Header />
+        <Header pageName="Performance" />
 
         <main className="performance-content">
           {/* HEADER */}

@@ -40,7 +40,7 @@ export default function EmployeeDetails() {
 
         <main className="employee-details-content">
 
-          <Header />
+          <Header pageName="Employees" />
 
           <h1>
             Employee Not Found

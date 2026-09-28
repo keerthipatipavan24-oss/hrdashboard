@@ -12,7 +12,7 @@ export default function AddEmployee() {
 
       <div className="add-employee-main">
 
-        <Header />
+        <Header pageName="Employees" />
 
         <main className="add-employee-content">
 

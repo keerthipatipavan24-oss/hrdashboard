@@ -394,7 +394,7 @@ export default function Employees() {
 
       <div className="employees-main">
 
-        <Header />
+        <Header pageName="Employees" />
 
         <main className="employees-content">
 

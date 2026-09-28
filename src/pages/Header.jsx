@@ -1,35 +1,6 @@
-import { useLocation } from "react-router-dom";
 import "./Header.css";
 
-export default function Header() {
-  const location = useLocation();
-
-  const pageNames = {
-    "/": "Dashboard",
-    "/dashboard": "Dashboard",
-    "/employees": "Employees",
-    "/departments": "Departments",
-    "/attendance": "Attendance",
-    "/leave": "Leave",
-    "/performance": "Performance",
-  };
-
-  let currentPage = pageNames[location.pathname];
-
-  // Employee-related pages
-  if (
-    location.pathname.startsWith("/add-employee") ||
-    location.pathname.startsWith("/edit-employee") ||
-    location.pathname.startsWith("/employee-details")
-  ) {
-    currentPage = "Employees";
-  }
-
-  // Default page name
-  if (!currentPage) {
-    currentPage = "Dashboard";
-  }
-
+export default function Header({ pageName = "Dashboard" }) {
   return (
     <header className="app-header">
 
@@ -44,7 +15,7 @@ export default function Header() {
         </div>
 
         <div className="header-page">
-          {currentPage}
+          {pageName}
         </div>
 
       </div>
@@ -52,12 +23,16 @@ export default function Header() {
       <div className="header-right">
 
         <div className="header-search">
-          <span>⌕</span>
+
+          <span>
+            ⌕
+          </span>
 
           <input
             type="text"
             placeholder="Find employees, reports..."
           />
+
         </div>
 
         <button className="header-action">
@@ -72,4 +47,4 @@ export default function Header() {
 
     </header>
   );
-}  
+} 

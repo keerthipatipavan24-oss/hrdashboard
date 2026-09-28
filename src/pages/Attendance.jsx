@@ -286,7 +286,7 @@ export default function Attendance() {
 
       <div className="attendance-main">
 
-        <Header />
+        <Header pageName="Attendance" />
 
       <main className="attendance-content">
 

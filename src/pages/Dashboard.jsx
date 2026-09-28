@@ -218,7 +218,7 @@ export default function Dashboard() {
       <div className="dashboard-main">
 
         {/* APPLICATION HEADER */}
-        <Header />
+        <Header pageName="Dashboard"/>
 
         {/* DASHBOARD CONTENT */}
         <main className="dashboard-content">
